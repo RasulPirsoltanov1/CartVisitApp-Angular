@@ -1,0 +1,19 @@
+<main class="mx-auto row">
+    <h1 class="page-title">All CartVisits </h1>
+    <p class="page-description">You can manage your all CatrVisits</p>
+    <button mat-button (click)="openDialog()" class="bg-primary text-white flex-end" style="margin:20px;width:200px; float: right;">Add CartVisit</button>
+    <div class="cards mx-auto">
+        <div class="row">
+          <div class="col-12" *ngIf="cardService.cards==null">
+            <span>CardServices loading...</span>
+          </div>
+          <div class="col-12 col-md-4" *ngFor="let item of cardService.cards">
+            <app-card-item [item]="item"></app-card-item>
+            <hr>
+          </div>
+        </div>
+    </div>
+
+</main>
+
+
